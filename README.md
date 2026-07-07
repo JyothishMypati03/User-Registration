@@ -1,14 +1,15 @@
-
-# 📌 UC2: Last Name Validation
+# 📌 UC3: Email Validation
 
 ## 🎯 Goal
 
-Validate the user's **Last Name** using Regular Expression (Regex).
+Validate the user's **Email Address** using Regular Expression (Regex).
 
-The last name must:
+The email must:
 
-- Start with a **Capital Letter**
-- Have a **minimum of 3 characters**
+- Contain a valid username
+- Contain the **@** symbol
+- Contain a valid domain name
+- Contain a valid domain extension (such as `.com`, `.in`, `.org`)
 
 ---
 
@@ -20,9 +21,9 @@ The last name must:
 
 ## 🔄 Flow
 
-1. User enters the last name.
-2. System validates the last name using Regex.
-3. If the last name is valid, a success message is displayed.
+1. User enters an email address.
+2. System validates the email using Regex.
+3. If the email is valid, a success message is displayed.
 4. Otherwise, an invalid message is displayed.
 
 ---
@@ -38,11 +39,14 @@ The last name must:
 
 ## 📋 Functional Requirements
 
-- Read the last name from the user.
-- Validate using Regex.
-- First letter should be uppercase.
-- Last name should contain at least 3 letters.
-- Display whether the last name is valid or invalid.
+- Read the email address from the user.
+- Validate the email using Regex.
+- Email should contain:
+    - Username
+    - `@` symbol
+    - Domain name
+    - Domain extension
+- Display whether the email is valid or invalid.
 
 ---
 
@@ -93,36 +97,37 @@ com.bridgelabz.userregistration
 ### Valid Input
 
 ```text
-Enter Last Name: Mypati
+Enter Email: jyothish@gmail.com
 
-Valid Last Name
+Valid Email
 ```
 
 ### Invalid Input
 
 ```text
-Enter Last Name: my
+Enter Email: jyothish@gmail
 
-Invalid Last Name
+Invalid Email
 ```
 
 ---
 
 ## 📈 Learning Outcome
 
-After completing UC2, you will understand:
+After completing UC3, you will understand:
 
-- How to validate the last name using Regex
+- What is Email Validation
+- How to validate emails using Regex
 - How to use the `matches()` method
 - How to validate user input in Java
-- How to apply basic validation rules using Regular Expressions
+- How to create reusable validation methods
 
 ---
 
 ## 🌿 Git Branch
 
 ```text
-feature/uc2-last-name-validation
+feature/uc3-email-validation
 ```
 
 ---
@@ -130,7 +135,7 @@ feature/uc2-last-name-validation
 ## 💬 Commit Message
 
 ```text
-feat(UC2): validate last name using regex
+feat(UC3): validate email using regex
 ```
 
 ---
@@ -139,5 +144,4 @@ feat(UC2): validate last name using regex
 
 - ✅ UC1 Completed
 - ✅ UC2 Completed
-```
-
+- ✅ UC3 Completed

@@ -11,14 +11,15 @@ public class UserRegistrationApplication {
         Scanner scanner = new Scanner(System.in);
         UserRegistrationValidator validator = new UserRegistrationValidator();
 
-        System.out.print("\nEnter Last Name: ");
-        String firstName = scanner.nextLine();
+        System.out.print("\nEnter Email: ");
+        String email = scanner.nextLine();
 
-        if (validator.validateLastName(firstName)) {
-            System.out.println("Valid Last Name");
+        if (validator.validateEmail(email)) {
+            System.out.println("Valid Email");
         } else {
-            System.out.println("Invalid Last Name");
+            System.out.println("Invalid Email");
         }
+
 
     }
 

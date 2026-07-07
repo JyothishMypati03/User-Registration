@@ -8,4 +8,12 @@ public class UserRegistrationValidator {
         return LastName.matches(LAST_NAME_PATTERN);
     }
 
+    // Example: abc.xyz@bl.co.in
+    private static final String EMAIL_PATTERN =
+            "^[a-zA-Z]+([.][a-zA-Z]+)?@[a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2})?$";
+
+    public boolean validateEmail(String email) {
+        return email.matches(EMAIL_PATTERN);
+    }
+
 }
