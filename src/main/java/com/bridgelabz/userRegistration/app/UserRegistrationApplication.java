@@ -11,13 +11,13 @@ public class UserRegistrationApplication {
         Scanner scanner = new Scanner(System.in);
         UserRegistrationValidator validator = new UserRegistrationValidator();
 
-        System.out.print("\nEnter First Name: ");
+        System.out.print("\nEnter Last Name: ");
         String firstName = scanner.nextLine();
 
-        if (validator.validateFirstName(firstName)) {
-            System.out.println("Valid First Name");
+        if (validator.validateLastName(firstName)) {
+            System.out.println("Valid Last Name");
         } else {
-            System.out.println("Invalid First Name");
+            System.out.println("Invalid Last Name");
         }
 
     }
