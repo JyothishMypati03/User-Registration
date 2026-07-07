@@ -1,12 +1,12 @@
-# 📌 UC6: Password Validation - Rule 2
+# 📌 UC7: Password Validation - Rule 3
 
 ## 🎯 Goal
 
 Validate the user's **Password** using Regular Expression (Regex).
 
-**Rule 2:**
+**Rule 3:**
 
-- Password must contain **at least one uppercase letter**.
+- Password must contain **at least one numeric digit (0-9)**.
 
 > **Note:** All previous password rules must also be satisfied.
 
@@ -22,7 +22,7 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 1. User enters the password.
 2. System validates the password using Regex.
-3. If the password contains at least one uppercase letter, a success message is displayed.
+3. If the password contains at least one numeric digit, a success message is displayed.
 4. Otherwise, an invalid message is displayed.
 
 ---
@@ -41,7 +41,7 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 - Read the password from the user.
 - Validate the password using Regex.
-- Password must contain **at least one uppercase letter (A–Z)**.
+- Password must contain **at least one numeric digit (0-9)**.
 - Display whether the password is valid or invalid.
 
 ---
@@ -101,7 +101,7 @@ Valid Password
 ### Invalid Input
 
 ```text
-Enter Password: abcdef12
+Enter Password: Abcdefgh
 
 Invalid Password
 ```
@@ -110,11 +110,11 @@ Invalid Password
 
 ## 📈 Learning Outcome
 
-After completing UC6, you will understand:
+After completing UC7, you will understand:
 
 - How to validate passwords using Regex
 - How to use a **positive lookahead** in Regex
-- How to check for at least one uppercase letter
+- How to check whether a password contains at least one numeric digit
 - How to use the `matches()` method
 - How to build reusable validation methods
 
@@ -123,7 +123,7 @@ After completing UC6, you will understand:
 ## 🌿 Git Branch
 
 ```text
-feature/uc6-password-rule2
+feature/uc7-password-rule3
 ```
 
 ---
@@ -131,7 +131,7 @@ feature/uc6-password-rule2
 ## 💬 Commit Message
 
 ```text
-feat(UC6): validate password with at least one uppercase letter
+feat(UC7): validate password with at least one numeric digit
 ```
 
 ---
@@ -144,3 +144,4 @@ feat(UC6): validate password with at least one uppercase letter
 - ✅ UC4 Completed
 - ✅ UC5 Completed
 - ✅ UC6 Completed
+- ✅ UC7 Completed
