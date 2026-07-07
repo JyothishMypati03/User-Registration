@@ -1,12 +1,12 @@
-# 📌 UC7: Password Validation - Rule 3
+# 📌 UC8: Password Validation - Rule 4
 
 ## 🎯 Goal
 
 Validate the user's **Password** using Regular Expression (Regex).
 
-**Rule 3:**
+**Rule 4:**
 
-- Password must contain **at least one numeric digit (0-9)**.
+- Password must contain **exactly one special character**.
 
 > **Note:** All previous password rules must also be satisfied.
 
@@ -22,8 +22,9 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 1. User enters the password.
 2. System validates the password using Regex.
-3. If the password contains at least one numeric digit, a success message is displayed.
-4. Otherwise, an invalid message is displayed.
+3. System checks whether the password contains exactly one special character.
+4. If all password rules are satisfied, a success message is displayed.
+5. Otherwise, an invalid message is displayed.
 
 ---
 
@@ -41,7 +42,11 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 - Read the password from the user.
 - Validate the password using Regex.
-- Password must contain **at least one numeric digit (0-9)**.
+- Password must contain:
+    - Minimum **8 characters**
+    - At least **one uppercase letter**
+    - At least **one numeric digit**
+    - **Exactly one special character**
 - Display whether the password is valid or invalid.
 
 ---
@@ -93,15 +98,23 @@ com.bridgelabz.userregistration
 ### Valid Input
 
 ```text
-Enter Password: Abcdef12
+Enter Password: Abcd@1234
 
 Valid Password
 ```
 
-### Invalid Input
+### Invalid Input (No Special Character)
 
 ```text
-Enter Password: Abcdefgh
+Enter Password: Abcd1234
+
+Invalid Password
+```
+
+### Invalid Input (More Than One Special Character)
+
+```text
+Enter Password: Abcd@@1234
 
 Invalid Password
 ```
@@ -110,20 +123,20 @@ Invalid Password
 
 ## 📈 Learning Outcome
 
-After completing UC7, you will understand:
+After completing UC8, you will understand:
 
 - How to validate passwords using Regex
-- How to use a **positive lookahead** in Regex
-- How to check whether a password contains at least one numeric digit
-- How to use the `matches()` method
-- How to build reusable validation methods
+- How to combine multiple validation rules
+- How to check for exactly one special character
+- How to use positive lookaheads in Regex
+- How to create reusable validation methods in Java
 
 ---
 
 ## 🌿 Git Branch
 
 ```text
-feature/uc7-password-rule3
+feature/uc8-password-rule4
 ```
 
 ---
@@ -131,7 +144,7 @@ feature/uc7-password-rule3
 ## 💬 Commit Message
 
 ```text
-feat(UC7): validate password with at least one numeric digit
+feat(UC8): validate password with exactly one special character
 ```
 
 ---
@@ -145,3 +158,4 @@ feat(UC7): validate password with at least one numeric digit
 - ✅ UC5 Completed
 - ✅ UC6 Completed
 - ✅ UC7 Completed
+- ✅ UC8 Completed

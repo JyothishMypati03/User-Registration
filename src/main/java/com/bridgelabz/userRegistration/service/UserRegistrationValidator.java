@@ -24,7 +24,7 @@ public class UserRegistrationValidator {
         return mobileNumber.matches(MOBILE_PATTERN);
     }
 
-    private static final String PASSWORD_PATTERN = "^(?=.*[0-9]).+$";
+    private static final String PASSWORD_PATTERN = "^(?=(?:.*[^a-zA-Z0-9]){1})(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 
     public boolean validatePasswordRule1(String password) {
         return password.matches(PASSWORD_PATTERN);
