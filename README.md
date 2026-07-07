@@ -1,173 +1,87 @@
-#  User Registration Problem
+#  UC1: First Name Validation
 
-##  Project Overview
+##  Goal
 
-The **User Registration Problem** is a console-based Java application developed using **Core Java** and **Maven**. The project validates user registration details using **Regular Expressions (Regex)** by applying a series of validation rules.
+Validate the user's **First Name** using Regular Expression (Regex).
 
-The application is implemented incrementally through multiple use cases (UCs). Each use case introduces a new validation rule and helps understand Java programming concepts such as Regular Expressions, Exception Handling, Functional Interfaces, Lambda Expressions, and Unit Testing.
+The first name must:
 
----
-
-##  Project Objectives
-
-The application validates the following user registration fields:
-
-- First Name
-- Last Name
-- Email Address
-- Mobile Number
-- Password
-
-Each validation follows predefined business rules to ensure that only valid user information is accepted.
+- Start with a **Capital Letter**
+- Have a **minimum of 3 characters**
 
 ---
 
-##  Use Cases
+##  Flow
 
-| Use Case | Description |
-|----------|-------------|
-| UC1 | Validate First Name |
-| UC2 | Validate Last Name |
-| UC3 | Validate Email Address |
-| UC4 | Validate Mobile Number |
-| UC5 | Validate Password Rule 1 |
-| UC6 | Validate Password Rule 2 |
-| UC7 | Validate Password Rule 3 |
-| UC8 | Validate Password Rule 4 |
-| UC9 | Validate Multiple Email Samples |
+1. User enters the first name.
+2. System validates the first name using Regex.
+3. If the first name is valid, a success message is displayed.
+4. Otherwise, an invalid message is displayed.
 
 ---
 
-## Technologies Used
-
-- Java
-- Maven
-- Regular Expressions (Regex)
-- IntelliJ IDEA
-- Git & GitHub
-
----
-
-## 📂 Maven Project Structure
+##  Package Structure
 
 ```text
-UserRegistrationProblem
-│
-├── pom.xml
-├── README.md
-├── .gitignore
-│
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │
-│   │   └── com
-│   │       └── bridgelabz
-│   │           └── userregistration
-│   │               ├── app
-│   │               │   └── UserRegistrationApplication.java
-│   │               │
-│   │               ├── service
-│   │               │   └── UserRegistrationValidator.java
-│   │               │
-│   │               ├── util
-│   │               │   └── RegexPattern.java
-│   │               │
-│   │               └── exception
-│   │                   └── UserRegistrationException.java
-│   │
-│   └── resources
-│
-└── test
-    └── java
-```
-
----
-
-## 🏗 Package Structure
-
-```text
-com.bridgelabz.userRegistration
+com.bridgelabz.userregistration
 │
 ├── app
 │   └── UserRegistrationApplication.java
 │
-├── service
-│   └── UserRegistrationValidator.java
-│
-├── util
-│   └── RegexPattern.java
-│
-└── exception
-    └── UserRegistrationException.java
+└── service
+    └── UserRegistrationValidator.java
 ```
 
 ---
 
-##  Git Branch Strategy
+## Sample Output
+
+### Valid Input
 
 ```text
-main
-│
-└── dev
-     │
-     ├── feature/uc1-first-name-validation
-     ├── feature/uc2-last-name-validation
-     ├── feature/uc3-email-validation
-     ├── feature/uc4-mobile-number-validation
-     ├── feature/uc5-password-rule1
-     ├── feature/uc6-password-rule2
-     ├── feature/uc7-password-rule3
-     ├── feature/uc8-password-rule4
-     └── feature/uc9-email-validation-samples
+Enter First Name: Jyothish
+
+Valid First Name
 ```
 
----
-
-##  Development Workflow
-
-1. Initialize the Maven project on the **main** branch.
-2. Create the **dev** branch from **main**.
-3. Create a separate **feature** branch for every use case.
-4. Develop and test each feature independently.
-5. Merge completed feature branches into **dev**.
-6. After completing all use cases, merge **dev** into **main**.
-
----
-
-##  Java Concepts Covered
-
-- Regular Expressions (Regex)
-- Pattern & Matcher
-- Lambda Expressions
-- Functional Interfaces
-- Exception Handling
-- Custom Exceptions
-- Unit Testing (JUnit)
-- Maven Project Structure
-- Git Branching Strategy
-
----
-
-## 💬 Initial Commit Message
+### Invalid Input
 
 ```text
-initialize User Registration Maven project setup
+Enter First Name: jy
+
+Invalid First Name
 ```
 
 ---
 
-## 🚀 Project Status
+##  Learning Outcome
+
+After completing UC1, you will understand:
+
+- What is Regex
+- How to validate user input
+- How to use `matches()` in Java
+- How to read user input using `Scanner`
+- How to apply simple validation rules
+
+---
+
+##  Git Branch
 
 ```text
-✅ Project Setup Completed
-⏳ UC1 - First Name Validation
-⏳ UC2 - Last Name Validation
-⏳ UC3 - Email Validation
-⏳ UC4 - Mobile Number Validation
-⏳ UC5 - Password Rule 1
-⏳ UC6 - Password Rule 2
-⏳ UC7 - Password Rule 3
-⏳ UC8 - Password Rule 4
-⏳ UC9 - Email Validation Samples
+feature/uc1-first-name-validation
 ```
+
+---
+
+## Commit Message
+
+```text
+feat(UC1): validate first name using regex
+```
+
+---
+
+##  Project Status
+
+- ✅ UC1 Completed
