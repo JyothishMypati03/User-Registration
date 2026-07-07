@@ -1,14 +1,10 @@
-# 📌 UC8: Password Validation - Rule 4
+# 📌 UC9: Validate Multiple Email Samples
 
 ## 🎯 Goal
 
-Validate the user's **Password** using Regular Expression (Regex).
+Validate multiple email addresses using **Regular Expression (Regex)**.
 
-**Rule 4:**
-
-- Password must contain **exactly one special character**.
-
-> **Note:** All previous password rules must also be satisfied.
+The system should check each email sample individually and display whether it is **Valid** or **Invalid**.
 
 ---
 
@@ -20,34 +16,30 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 ## 🔄 Flow
 
-1. User enters the password.
-2. System validates the password using Regex.
-3. System checks whether the password contains exactly one special character.
-4. If all password rules are satisfied, a success message is displayed.
-5. Otherwise, an invalid message is displayed.
+1. System stores multiple email samples.
+2. System validates each email using Regex.
+3. Each email is checked one by one.
+4. The validation result (Valid/Invalid) is displayed.
+5. Program continues until all email samples are validated.
 
 ---
 
 ## 💡 Java Concepts Covered
 
 - Regular Expressions (Regex)
-- Positive Lookahead
 - String `matches()` Method
-- User Input using `Scanner`
+- Arrays
+- Enhanced `for` Loop
 - If-Else Statement
 
 ---
 
 ## 📋 Functional Requirements
 
-- Read the password from the user.
-- Validate the password using Regex.
-- Password must contain:
-    - Minimum **8 characters**
-    - At least **one uppercase letter**
-    - At least **one numeric digit**
-    - **Exactly one special character**
-- Display whether the password is valid or invalid.
+- Store multiple email samples in an array.
+- Validate each email using Regex.
+- Display whether each email is valid or invalid.
+- Process all email samples without stopping.
 
 ---
 
@@ -95,48 +87,43 @@ com.bridgelabz.userregistration
 
 ## ▶️ Sample Output
 
-### Valid Input
-
 ```text
-Enter Password: Abcd@1234
+=====================================
+    User Registration System
+=====================================
 
-Valid Password
-```
+jyothish@gmail.com      -> Valid
+abc@yahoo.com           -> Valid
+abc-100@yahoo.com       -> Valid
+abc.100@yahoo.com       -> Valid
+abc111@abc.com          -> Valid
+abc+100@gmail.com       -> Valid
 
-### Invalid Input (No Special Character)
-
-```text
-Enter Password: Abcd1234
-
-Invalid Password
-```
-
-### Invalid Input (More Than One Special Character)
-
-```text
-Enter Password: Abcd@@1234
-
-Invalid Password
+abc                     -> Invalid
+abc@.com.my             -> Invalid
+abc123@gmail.a          -> Invalid
+abc123@.com             -> Invalid
+abc123@.com.com         -> Invalid
 ```
 
 ---
 
 ## 📈 Learning Outcome
 
-After completing UC8, you will understand:
+After completing UC9, you will understand:
 
-- How to validate passwords using Regex
-- How to combine multiple validation rules
-- How to check for exactly one special character
-- How to use positive lookaheads in Regex
-- How to create reusable validation methods in Java
+- How to validate multiple email addresses
+- How to reuse the same Regex for multiple inputs
+- How to iterate through an array using a `for-each` loop
+- How to display validation results for multiple records
+- How to build reusable validation logic
 
 ---
 
 ## 🌿 Git Branch
 
 ```text
-feature/uc8-password-rule4
+feature/uc9-email-validation-samples
 ```
 
 ---
@@ -144,7 +131,7 @@ feature/uc8-password-rule4
 ## 💬 Commit Message
 
 ```text
-feat(UC8): validate password with exactly one special character
+feat(UC9): validate multiple email samples using regex
 ```
 
 ---
@@ -159,3 +146,5 @@ feat(UC8): validate password with exactly one special character
 - ✅ UC6 Completed
 - ✅ UC7 Completed
 - ✅ UC8 Completed
+- ✅ UC9 Completed
+- 🎉 **User Registration Problem Project Completed**

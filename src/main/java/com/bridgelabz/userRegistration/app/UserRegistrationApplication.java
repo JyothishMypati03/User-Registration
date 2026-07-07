@@ -11,13 +11,27 @@ public class UserRegistrationApplication {
         Scanner scanner = new Scanner(System.in);
         UserRegistrationValidator validator = new UserRegistrationValidator();
 
-        System.out.print("\nEnter Password: ");
-        String password = scanner.nextLine();
+        String[] emails = {
+                "jyothish@gmail.com",
+                "abc@yahoo.com",
+                "abc-100@yahoo.com",
+                "abc.100@yahoo.com",
+                "abc111@abc.com",
+                "abc@gmail.com",
+                "abc+100@gmail.com",
+                "abc",
+                "abc@.com.my",
+                "abc123@gmail.a",
+                "abc123@.com",
+                "abc123@.com.com"
+        };
 
-        if (validator.validatePasswordRule1(password)) {
-            System.out.println("Valid Password");
-        } else {
-            System.out.println("Invalid Password");
+        for (String email : emails) {
+            if (validator.validateEmail(email)) {
+                System.out.println(email + " -> Valid");
+            } else {
+                System.out.println(email + " -> Invalid");
+            }
         }
 
     }
