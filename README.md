@@ -1,12 +1,14 @@
-# 📌 UC5: Password Validation - Rule 1
+# 📌 UC6: Password Validation - Rule 2
 
 ## 🎯 Goal
 
 Validate the user's **Password** using Regular Expression (Regex).
 
-**Rule 1:**
+**Rule 2:**
 
-- Password must contain **at least 8 characters**.
+- Password must contain **at least one uppercase letter**.
+
+> **Note:** All previous password rules must also be satisfied.
 
 ---
 
@@ -20,7 +22,7 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 1. User enters the password.
 2. System validates the password using Regex.
-3. If the password contains at least 8 characters, a success message is displayed.
+3. If the password contains at least one uppercase letter, a success message is displayed.
 4. Otherwise, an invalid message is displayed.
 
 ---
@@ -28,6 +30,7 @@ Validate the user's **Password** using Regular Expression (Regex).
 ## 💡 Java Concepts Covered
 
 - Regular Expressions (Regex)
+- Positive Lookahead
 - String `matches()` Method
 - User Input using `Scanner`
 - If-Else Statement
@@ -38,7 +41,7 @@ Validate the user's **Password** using Regular Expression (Regex).
 
 - Read the password from the user.
 - Validate the password using Regex.
-- Password must contain **at least 8 characters**.
+- Password must contain **at least one uppercase letter (A–Z)**.
 - Display whether the password is valid or invalid.
 
 ---
@@ -90,7 +93,7 @@ com.bridgelabz.userregistration
 ### Valid Input
 
 ```text
-Enter Password: abc12345
+Enter Password: Abcdef12
 
 Valid Password
 ```
@@ -98,7 +101,7 @@ Valid Password
 ### Invalid Input
 
 ```text
-Enter Password: abc12
+Enter Password: abcdef12
 
 Invalid Password
 ```
@@ -107,12 +110,12 @@ Invalid Password
 
 ## 📈 Learning Outcome
 
-After completing UC5, you will understand:
+After completing UC6, you will understand:
 
 - How to validate passwords using Regex
-- How to enforce a minimum password length
+- How to use a **positive lookahead** in Regex
+- How to check for at least one uppercase letter
 - How to use the `matches()` method
-- How to validate user input in Java
 - How to build reusable validation methods
 
 ---
@@ -120,7 +123,7 @@ After completing UC5, you will understand:
 ## 🌿 Git Branch
 
 ```text
-feature/uc5-password-rule1
+feature/uc6-password-rule2
 ```
 
 ---
@@ -128,7 +131,7 @@ feature/uc5-password-rule1
 ## 💬 Commit Message
 
 ```text
-feat(UC5): validate password with minimum 8 characters
+feat(UC6): validate password with at least one uppercase letter
 ```
 
 ---
@@ -140,3 +143,4 @@ feat(UC5): validate password with minimum 8 characters
 - ✅ UC3 Completed
 - ✅ UC4 Completed
 - ✅ UC5 Completed
+- ✅ UC6 Completed
