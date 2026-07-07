@@ -1,20 +1,12 @@
-# 📌 UC4: Mobile Number Validation
+# 📌 UC5: Password Validation - Rule 1
 
 ## 🎯 Goal
 
-Validate the user's **Mobile Number** using Regular Expression (Regex).
+Validate the user's **Password** using Regular Expression (Regex).
 
-The mobile number must:
+**Rule 1:**
 
-- Start with a **Country Code**
-- Followed by a **single space**
-- End with a **10-digit mobile number**
-
-Example:
-
-```text
-91 9919819801
-```
+- Password must contain **at least 8 characters**.
 
 ---
 
@@ -26,9 +18,9 @@ Example:
 
 ## 🔄 Flow
 
-1. User enters the mobile number.
-2. System validates the mobile number using Regex.
-3. If the mobile number is valid, a success message is displayed.
+1. User enters the password.
+2. System validates the password using Regex.
+3. If the password contains at least 8 characters, a success message is displayed.
 4. Otherwise, an invalid message is displayed.
 
 ---
@@ -44,12 +36,10 @@ Example:
 
 ## 📋 Functional Requirements
 
-- Read the mobile number from the user.
-- Validate the mobile number using Regex.
-- Country code should come first.
-- There must be one space after the country code.
-- Mobile number should contain exactly 10 digits.
-- Display whether the mobile number is valid or invalid.
+- Read the password from the user.
+- Validate the password using Regex.
+- Password must contain **at least 8 characters**.
+- Display whether the password is valid or invalid.
 
 ---
 
@@ -100,37 +90,37 @@ com.bridgelabz.userregistration
 ### Valid Input
 
 ```text
-Enter Mobile Number: 91 9919819801
+Enter Password: abc12345
 
-Valid Mobile Number
+Valid Password
 ```
 
 ### Invalid Input
 
 ```text
-Enter Mobile Number: 919919819801
+Enter Password: abc12
 
-Invalid Mobile Number
+Invalid Password
 ```
 
 ---
 
 ## 📈 Learning Outcome
 
-After completing UC4, you will understand:
+After completing UC5, you will understand:
 
-- How to validate mobile numbers using Regex
+- How to validate passwords using Regex
+- How to enforce a minimum password length
 - How to use the `matches()` method
 - How to validate user input in Java
-- How to enforce a predefined mobile number format
-- How to create reusable validation methods
+- How to build reusable validation methods
 
 ---
 
 ## 🌿 Git Branch
 
 ```text
-feature/uc4-mobile-number-validation
+feature/uc5-password-rule1
 ```
 
 ---
@@ -138,7 +128,7 @@ feature/uc4-mobile-number-validation
 ## 💬 Commit Message
 
 ```text
-feat(UC4): validate mobile number using regex
+feat(UC5): validate password with minimum 8 characters
 ```
 
 ---
@@ -149,4 +139,4 @@ feat(UC4): validate mobile number using regex
 - ✅ UC2 Completed
 - ✅ UC3 Completed
 - ✅ UC4 Completed
-```
+- ✅ UC5 Completed

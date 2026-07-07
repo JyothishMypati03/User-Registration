@@ -24,4 +24,10 @@ public class UserRegistrationValidator {
         return mobileNumber.matches(MOBILE_PATTERN);
     }
 
+    private static final String PASSWORD_RULE1_PATTERN = "^.{8,}$";
+
+    public boolean validatePasswordRule1(String password) {
+        return password.matches(PASSWORD_RULE1_PATTERN);
+    }
+
 }

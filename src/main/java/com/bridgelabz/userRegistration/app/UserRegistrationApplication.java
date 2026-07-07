@@ -11,13 +11,13 @@ public class UserRegistrationApplication {
         Scanner scanner = new Scanner(System.in);
         UserRegistrationValidator validator = new UserRegistrationValidator();
 
-        System.out.print("\nEnter Mobile Number: ");
-        String mobileNumber = scanner.nextLine();
+        System.out.print("\nEnter Password: ");
+        String password = scanner.nextLine();
 
-        if (validator.validateMobileNumber(mobileNumber)) {
-            System.out.println("Valid Mobile Number");
+        if (validator.validatePasswordRule1(password)) {
+            System.out.println("Valid Password");
         } else {
-            System.out.println("Invalid Mobile Number");
+            System.out.println("Invalid Password");
         }
 
     }
