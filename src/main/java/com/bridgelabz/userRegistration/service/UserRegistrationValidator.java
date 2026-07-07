@@ -14,6 +14,14 @@ public class UserRegistrationValidator {
 
     public boolean validateEmail(String email) {
         return email.matches(EMAIL_PATTERN);
+
+    }
+
+    // Example: 91 9919819801
+    private static final String MOBILE_PATTERN = "^[1-9][0-9]{0,2} [0-9]{10}$";
+
+    public boolean validateMobileNumber(String mobileNumber) {
+        return mobileNumber.matches(MOBILE_PATTERN);
     }
 
 }

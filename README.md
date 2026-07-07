@@ -1,15 +1,20 @@
-# 📌 UC3: Email Validation
+# 📌 UC4: Mobile Number Validation
 
 ## 🎯 Goal
 
-Validate the user's **Email Address** using Regular Expression (Regex).
+Validate the user's **Mobile Number** using Regular Expression (Regex).
 
-The email must:
+The mobile number must:
 
-- Contain a valid username
-- Contain the **@** symbol
-- Contain a valid domain name
-- Contain a valid domain extension (such as `.com`, `.in`, `.org`)
+- Start with a **Country Code**
+- Followed by a **single space**
+- End with a **10-digit mobile number**
+
+Example:
+
+```text
+91 9919819801
+```
 
 ---
 
@@ -21,9 +26,9 @@ The email must:
 
 ## 🔄 Flow
 
-1. User enters an email address.
-2. System validates the email using Regex.
-3. If the email is valid, a success message is displayed.
+1. User enters the mobile number.
+2. System validates the mobile number using Regex.
+3. If the mobile number is valid, a success message is displayed.
 4. Otherwise, an invalid message is displayed.
 
 ---
@@ -39,14 +44,12 @@ The email must:
 
 ## 📋 Functional Requirements
 
-- Read the email address from the user.
-- Validate the email using Regex.
-- Email should contain:
-    - Username
-    - `@` symbol
-    - Domain name
-    - Domain extension
-- Display whether the email is valid or invalid.
+- Read the mobile number from the user.
+- Validate the mobile number using Regex.
+- Country code should come first.
+- There must be one space after the country code.
+- Mobile number should contain exactly 10 digits.
+- Display whether the mobile number is valid or invalid.
 
 ---
 
@@ -97,29 +100,29 @@ com.bridgelabz.userregistration
 ### Valid Input
 
 ```text
-Enter Email: jyothish@gmail.com
+Enter Mobile Number: 91 9919819801
 
-Valid Email
+Valid Mobile Number
 ```
 
 ### Invalid Input
 
 ```text
-Enter Email: jyothish@gmail
+Enter Mobile Number: 919919819801
 
-Invalid Email
+Invalid Mobile Number
 ```
 
 ---
 
 ## 📈 Learning Outcome
 
-After completing UC3, you will understand:
+After completing UC4, you will understand:
 
-- What is Email Validation
-- How to validate emails using Regex
+- How to validate mobile numbers using Regex
 - How to use the `matches()` method
 - How to validate user input in Java
+- How to enforce a predefined mobile number format
 - How to create reusable validation methods
 
 ---
@@ -127,7 +130,7 @@ After completing UC3, you will understand:
 ## 🌿 Git Branch
 
 ```text
-feature/uc3-email-validation
+feature/uc4-mobile-number-validation
 ```
 
 ---
@@ -135,7 +138,7 @@ feature/uc3-email-validation
 ## 💬 Commit Message
 
 ```text
-feat(UC3): validate email using regex
+feat(UC4): validate mobile number using regex
 ```
 
 ---
@@ -145,3 +148,5 @@ feat(UC3): validate email using regex
 - ✅ UC1 Completed
 - ✅ UC2 Completed
 - ✅ UC3 Completed
+- ✅ UC4 Completed
+```
