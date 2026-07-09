@@ -26,8 +26,9 @@ public class UserRegistrationValidator {
 
     private static final String PASSWORD_PATTERN = "^(?=.*[0-9]).+$";
 
-    public boolean validatePasswordRule1(String password) {
+    public boolean validatePasswordRule(String password) {
         return password.matches(PASSWORD_PATTERN);
     }
+
 
 }
